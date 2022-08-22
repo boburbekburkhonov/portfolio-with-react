@@ -1,0 +1,77 @@
+.header-logo {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.header-logo:hover {
+  opacity: 0.7;
+}
+
+.header-logo:active {
+  opacity: 0.5;
+}
+
+.sitenav__list-link::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../../assets/images/phone-call.png);
+  position: relative;
+  top: 5px;
+  margin-right: 10px;
+}
+
+.sitenav__list-line {
+  height: 22px;
+  width: 1px;
+  background: #00094A;
+}
+
+.sitenav__list-dark {
+  background: #000000;
+  max-width: 100px;
+  width: 100%;
+  color: #ffff;
+  padding: 10px 5px;
+  border-radius: 5px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.sitenav__list-dark:hover {
+  opacity: 0.7;
+}
+
+.sitenav__list-dark:active {
+  opacity: 0.5;
+}
+
+.sitenav__list-select {
+  background: none;
+  text-transform: uppercase;
+  border: transparent;
+}
+
+.sitenav__list-select:focus {
+  outline: none;
+  border: transparent;
+}
+
+.sitenav__list-btn {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.sitenav__list-btn:hover {
+  opacity: 0.7;
+}
+
+.sitenav__list-btn:active {
+  opacity: 0.7;
+}
+
+.sitenav__item {
+  margin-left: 40px;
+}
+/*# sourceMappingURL=main.css.map */
