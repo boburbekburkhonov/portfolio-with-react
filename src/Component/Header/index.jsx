@@ -1,11 +1,18 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import logo from '../../assets/images/logo.svg'
 import phoneCall from '../../assets/images/phone-call.png'
 import './main.scss'
 
 function index(props) {
+
+  const header = useRef()
+
+  function toggle() {
+    header.current.classList.toggle('header--open')
+  }
+
   return (
-    <header className='header py-3'>
+    <header ref={header} className='header py-3'>
       <div className="container mx-auto flex items-center justify-between">
         <a className='header__link no-underline' href="#">
           <img className='header-logo' src={logo} alt="126" width='186' height='44' />
@@ -38,11 +45,16 @@ function index(props) {
               </select>
             </li>
 
-            <li className='sitenav__item'>
+            <li className='sitenav__item sitenav__item-active'>
               <button className='sitenav__list-btn bg-[#00094A] rounded-[3px] text-[#ffffff] text-[12px] leading-[15px] font-bold font-Montserrat px-[30px] py-[14px]'>Bog'lanish</button>
             </li>
           </ul>
         </nav>
+
+        <div onClick={() => toggle()} className='header__hamburger'>
+          <span className='text-[#00094A] text-[12px] leading-[15px] font-semibold font-Montserrat mr-2'>MENYU</span>
+        <button className='header__hamburger-img'></button>
+        </div>
       </div>
     </header>
   );
