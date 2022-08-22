@@ -107,6 +107,14 @@
   background-repeat: no-repeat;
 }
 
+.hide {
+  display: none;
+}
+
+.show {
+  display: inline-block;
+}
+
 @media only screen and (max-width: 790px) {
   .header {
     position: relative;
@@ -129,6 +137,10 @@
   .header--open .sitenav__item-active {
     display: inline-block;
     margin: 0;
+  }
+  .header--open .header__hamburger-img {
+    background-image: url(../../assets/images/closed.png);
+    background-size: contain;
   }
 }
 /*# sourceMappingURL=main.css.map */

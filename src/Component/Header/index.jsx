@@ -6,9 +6,13 @@ import './main.scss'
 function index(props) {
 
   const header = useRef()
+  const menyu = useRef()
+  const yopish = useRef()
 
   function toggle() {
     header.current.classList.toggle('header--open')
+    menyu.current.classList.toggle('hide')
+    yopish.current.classList.toggle('show')
   }
 
   return (
@@ -52,7 +56,8 @@ function index(props) {
         </nav>
 
         <div onClick={() => toggle()} className='header__hamburger'>
-          <span className='text-[#00094A] text-[12px] leading-[15px] font-semibold font-Montserrat mr-2'>MENYU</span>
+          <span ref={menyu} className='text-[#00094A] text-[12px] leading-[15px] font-semibold font-Montserrat mr-2'>MENYU</span>
+          <span ref={yopish} className='text-[#00094A] text-[12px] leading-[15px] font-semibold font-Montserrat mr-2 hide'>Yopish</span>
         <button className='header__hamburger-img'></button>
         </div>
       </div>
