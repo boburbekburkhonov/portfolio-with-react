@@ -1,0 +1,16 @@
+.statistics {
+
+  &__item + &__item {
+    margin-left: 150px;
+  }
+
+}
+
+
+@media only screen and (max-width: 1000px) {
+
+  .statistics__item:nth-child(4) {
+    margin-top: 30px;
+    margin-left: 0;
+  }
+}

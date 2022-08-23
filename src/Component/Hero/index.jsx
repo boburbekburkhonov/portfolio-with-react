@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import dataContext from '../../Context/dataContext';
+import dataContext from '../Context/dataContext';
 import video from '../../assets/images/video.png'
 import './main.scss'
 

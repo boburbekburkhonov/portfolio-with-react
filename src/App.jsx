@@ -1,7 +1,8 @@
 import { useState, useRef } from 'react'
 import Header from './Component/Layout/Header'
 import Hero from './Component/Hero'
-import dataContext from './Context/dataContext'
+import Statistics from './Component/Statistics'
+import dataContext from './Component/Context/dataContext'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
         <Header />
         <main ref={main} className='main'>
           <Hero />
+          <Statistics />
         </main>
       </dataContext.Provider>
     </>

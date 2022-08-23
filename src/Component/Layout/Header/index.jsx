@@ -1,5 +1,5 @@
 import React, {useRef, useContext} from 'react';
-import dataContext from '../../../Context/dataContext';
+import dataContext from '../../Context/dataContext';
 import logo from '../../../assets/images/logo.svg'
 import './main.scss'
 
@@ -50,7 +50,7 @@ function index(props) {
             </li>
 
             <li className='sitenav__item sitenav__item-active'>
-              <button className='sitenav__list-btn bg-[#00094A] rounded-[3px] text-[#ffffff] text-[12px] leading-[15px] font-bold font-Montserrat px-[30px] py-[14px]'>Bog'lanish</button>
+              <button className='sitenav__list-btn bg-[#00094A] rounded-[8px] text-[#ffffff] text-[12px] leading-[15px] font-bold font-Montserrat px-[30px] py-[14px]'>Bog'lanish</button>
             </li>
           </ul>
         </nav>
