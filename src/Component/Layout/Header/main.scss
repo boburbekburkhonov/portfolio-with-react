@@ -23,7 +23,7 @@
       display: inline-block;
       width: 20px;
       height: 20px;
-      background-image: url(../../assets/images/phone-call.png);
+      background-image: url(../../../assets/images/phone-call.png);
       position: relative;
       top: 5px;
       margin-right: 10px;
@@ -104,7 +104,7 @@
   border: transparent;
   width: 17px;
   height: 12px;
-  background-image: url(../../assets/images/hamburger.png);
+  background-image: url(../../../assets/images/hamburger.png);
   background-repeat: no-repeat;
 }
 
@@ -147,8 +147,16 @@
   }
 
   .header--open .header__hamburger-img {
-    background-image: url(../../assets/images/closed.png);
+    background-image: url(../../../assets/images/closed.png);
     background-size: contain;
+  }
+
+}
+
+@media only screen and (max-width: 575px){
+
+  .header-logo {
+    max-width: 140px;
   }
 
 }

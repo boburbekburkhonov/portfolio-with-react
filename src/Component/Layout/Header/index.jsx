@@ -1,6 +1,6 @@
-import React, {useRef} from 'react';
-import logo from '../../assets/images/logo.svg'
-import phoneCall from '../../assets/images/phone-call.png'
+import React, {useRef, useContext} from 'react';
+import dataContext from '../../../Context/dataContext';
+import logo from '../../../assets/images/logo.svg'
 import './main.scss'
 
 function index(props) {
@@ -9,14 +9,18 @@ function index(props) {
   const menyu = useRef()
   const yopish = useRef()
 
+  const {main}  = useContext(dataContext)
+  console.log(main);
+
   function toggle() {
     header.current.classList.toggle('header--open')
     menyu.current.classList.toggle('hide')
     yopish.current.classList.toggle('show')
+    main.current.classList.toggle('hidden')
   }
 
   return (
-    <header ref={header} className='header py-3'>
+    <header ref={header} className={`header py-[20px]`}>
       <div className="container mx-auto flex items-center justify-between">
         <a className='header__link no-underline' href="#">
           <img className='header-logo' src={logo} alt="126" width='186' height='44' />
@@ -25,7 +29,7 @@ function index(props) {
         <nav className='sitenav'>
           <ul className='list-none sitenav__list flex items-center'>
             <li className='sitenav__item'>
-              <a className='sitenav__list-link text-[#00094A] text-[12px] font-semibold leading-[15px] font-Montserrat' href="tel:+998901234567">
+              <a className={`sitenav__list-link text-[#00094A] text-[12px] font-semibold leading-[15px] font-Montserrat`} href="tel:+998901234567">
                 +998 90 123 45 67
               </a>
             </li>
@@ -37,12 +41,8 @@ function index(props) {
             </li>
 
             <li className='sitenav__item'>
-              <button className='sitenav__list-dark'>Dark</button>
-            </li>
-
-            <li className='sitenav__item'>
-              <select className='sitenav__list-select font-Montserrat text-[#00094A]
-              text-[12px] leading-[15px] font-semibold bg-none' name='lan'>
+              <select className={`sitenav__list-select font-Montserrat text-[#00094A]
+              text-[12px] leading-[15px] font-semibold bg-none`} name='lan'>
                 <option value="uz">uz</option>
                 <option value="ru">ru</option>
                 <option value="en">en</option>
