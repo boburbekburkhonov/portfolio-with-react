@@ -1,16 +1,31 @@
 .statistics {
 
-  &__item + &__item {
-    margin-left: 150px;
+  .statistics__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 
 }
 
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1239px) {
 
   .statistics__item:nth-child(4) {
-    margin-top: 30px;
-    margin-left: 0;
+    margin-top: 60px;
   }
+}
+
+@media only screen and (max-width: 939px) {
+
+  .statistics__item:nth-child(3) {
+    margin-top: 60px;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+
+  .statistics__item:nth-child(2) {
+    margin-top: 60px;
+  }
+
 }

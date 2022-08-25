@@ -10,7 +10,6 @@ function index(props) {
   const yopish = useRef()
 
   const {main}  = useContext(dataContext)
-  console.log(main);
 
   function toggle() {
     header.current.classList.toggle('header--open')
@@ -55,7 +54,7 @@ function index(props) {
           </ul>
         </nav>
 
-        <div onClick={() => toggle()} className='header__hamburger'>
+        <div onClick={() => toggle()} className='header__hamburger cursor-pointer'>
           <span ref={menyu} className='text-[#00094A] text-[12px] leading-[15px] font-semibold font-Montserrat mr-2'>MENYU</span>
           <span ref={yopish} className='text-[#00094A] text-[12px] leading-[15px] font-semibold font-Montserrat mr-2 hide'>Yopish</span>
         <button className='header__hamburger-img'></button>
